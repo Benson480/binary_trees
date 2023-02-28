@@ -1,8 +1,10 @@
 C Binary Tree with an Example C Code (Search, Delete, Insert Nodes)
+
 by Benson Mwangi, Stephanie Iman and Benjamin Musyoki FEBRUARY 28, 2023
 
 
 Binary tree is the data structure to maintain data into memory of program. There exists many data structures, but they are chosen for usage on the basis of time consumed in insert/search/delete operations performed on data structures.
+
 
 Binary tree is one of the data structures that are efficient in insertion and searching operations. Binary tree works on O (logN) for insert/search/delete operations.
 
@@ -20,6 +22,8 @@ Displaying binary tree
 Creation of binary tree
 Binary tree is created by inserting root node and its child nodes. We will use a C programming language for all the examples. Below is the code snippet for insert function. It will insert nodes.
 
+
+
 11 void insert(node ** tree, int val) {
 12 node *temp = NULL;
 13 if(!(*tree)) {
@@ -36,6 +40,7 @@ Binary tree is created by inserting root node and its child nodes. We will use a
 24     insert(&(*tree)->right, val);
 25   }
 26 }
+
 This function would determine the position as per value of node to be added and new node would be added into binary tree. Function is explained in steps below and code snippet lines are mapped to explanation steps given below.
 
 [Lines 13-19] Check first if tree is empty, then insert node as root.
@@ -50,6 +55,8 @@ a. [Line 24] Call insert() function recursively while there is non-NULL right no
 b. [Lines 13-19] When reached to rightmost node as NULL, insert new node.
 Searching into binary tree
 Searching is done as per value of node to be searched whether it is root node or it lies in left or right sub-tree. Below is the code snippet for search function. It will search node into binary tree.
+
+
 
 46 node* search(node ** tree, int val) {
 47 if(!(*tree)) {
@@ -135,6 +142,10 @@ b. [Line 45] Call print_postorder() function recursively while there is non-NULL
 c. [Line46] Display value of root node.
 Working program
 It is noted that above code snippets are parts of below C program. This below program would be working basic program for binary tree.
+
+
+
+
 
 #include<stdlib.h>
 #include<stdio.h>
@@ -230,6 +241,8 @@ node* search(node ** tree, int val)
     }
 }
 
+
+
 void main()
 {
     node *root;
@@ -270,9 +283,18 @@ void main()
     /* Deleting all nodes of tree */
     deltree(root);
 }
+
+
+
+
 Output of Program:
 
+
+
 It is noted that binary tree figure used at top of article can be referred to under output of program and display of binary tree in pre-order, in-order and post-order forms.
+
+
+
 
 $ ./a.out
 Pre Order Display

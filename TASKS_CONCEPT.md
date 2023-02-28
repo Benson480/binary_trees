@@ -131,6 +131,8 @@ This implementation creates a binary search tree with seven nodes, performs an i
 Example 2.
 */
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -187,6 +189,8 @@ void postorder(struct bt *q)
     }
 }
 
+
+
 int main(int argc, int **argv)
 {
     struct bt *root=(struct bt *)malloc(sizeof(struct bt));
@@ -204,12 +208,16 @@ int main(int argc, int **argv)
     postorder(root);
     return 0;
 }
+
+
 This code defines a binary tree data structure using a structure named bt, which has three fields: an integer data field, and two pointers to bt structs, named left and right, which represent the left and right children of a node.
 The code defines a function insert that takes a pointer to a bt struct q, an integer val, and a character dir. The function creates a new bt struct, sets its data field to val, and sets its left and right pointers to NULL. If dir is 'l', the new node is added as the left child of q; otherwise, it is added as the right child.
 The code also defines three functions for tree traversal: inorder, preorder, and postorder. Each of these functions takes a pointer to a bt struct and recursively traverses the tree, printing out the node values in a different order.
 The main function creates a binary tree with five nodes using the insert function, and then calls each of the traversal functions to print out the values of the nodes in the tree in different orders. Specifically, it prints out the values of the nodes in inorder, preorder, and postorder.
 
 we can call the inorder() function which performs the in-order traversal of the binary tree and prints the data of each node.
+
+
 
 Here's an example code
 #include <stdio.h>
@@ -268,6 +276,7 @@ int main(int argc, int **argv)
 
     return 0;
 }
+
 
 Display element in order:  5  3  1  2  7
 
